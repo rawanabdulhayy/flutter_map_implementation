@@ -25,7 +25,7 @@ class _UserLocationScreenState extends State<UserLocationScreen> {
 
   Future<void> _getCurrentLocation() async {
     try {
-      final position = await Geolocator.getCurrentPosition();
+      final Position position = await Geolocator.getCurrentPosition();
       _currentPosition = LatLng(position.latitude, position.longitude);
       _moveToCurrentLocation();
     } catch (e) {
